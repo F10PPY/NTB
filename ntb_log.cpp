@@ -1,8 +1,10 @@
 #include "ntb_log.h"
+
+
 namespace ntb
 {
 static  std::array<IP7_Trace *,LogSinksSize>log_sink_arr;
-void p7Release(uint log_sink, IP7_Telemetry *l_pTelemetry, IP7_Client *l_pClient)
+void p7Release(u_int log_sink, IP7_Telemetry *l_pTelemetry, IP7_Client *l_pClient)
 {
     if (l_pTelemetry)
     {

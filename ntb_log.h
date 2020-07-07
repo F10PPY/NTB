@@ -1,8 +1,9 @@
 #ifndef NTB_LOG_H
 #define NTB_LOG_H
-#include "common.h"
-#include "P7_Trace.h"
-#include "P7_Telemetry.h"
+#include <string>
+//#include "common.h"
+//#include "P7_Trace.h"
+//#include "P7_Telemetry.h"
 
 #define  NTB_LOG_TRACE P7_TRACE_LEVEL_TRACE
 #define  NTB_LOG_DEBUG P7_TRACE_LEVEL_DEBUG
@@ -36,7 +37,7 @@ void logNoMacro(ulong log_sink, uint level,tUINT16 i_wLine, const char *i_pFile,
 
 
 
-void p7Release(uint log_sink=0, IP7_Telemetry *l_pTelemetry=nullptr, IP7_Client *l_pClient=nullptr);
+void p7Release(u_int log_sink=0, IP7_Telemetry *l_pTelemetry=nullptr, IP7_Client *l_pClient=nullptr);
 bool p7Init(std::string_view wName);
 bool p7RegThread(uint log_sink,std::string_view str)noexcept;
 void p7UnregThread(uint log_sink);

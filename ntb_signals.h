@@ -2,7 +2,6 @@
 #define NTB_SIGNALS_H
 #include <sys/signalfd.h>
 #include <signal.h>
-#include "common.h"
 #include "ntb_errors.h"
 
 namespace ntb

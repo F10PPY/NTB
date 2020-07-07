@@ -3,7 +3,7 @@ CONFIG -= qt
 TEMPLATE = lib
 DEFINES += NTB_LIBRARY
 
-CONFIG += c++11
+CONFIG += c++2a
 
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
@@ -15,7 +15,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # In order to do so, uncomment the following line.
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
-
+LIBS += -Xlinker -Bstatic -L../deps/P7/Binaries/ -lP7
 SOURCES += \
     ntb.cpp \
     ntb_errors.cpp \
@@ -33,6 +33,7 @@ HEADERS += \
     ntb.h \
     ntb_charrp.h \
     ntb_colors.h \
+    ntb_common.h \
     ntb_errors.h \
     ntb_log.h \
     ntb_mempool.h \
@@ -44,7 +45,7 @@ HEADERS += \
     ntb_ssl.h \
     ntb_timers.h \
     ntb_util.h
-
+INCLUDEPATH += ../deps/
 # Default rules for deployment.
 unix {
     target.path = /usr/lib

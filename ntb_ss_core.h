@@ -1,6 +1,6 @@
 #ifndef NTB_SS_CORE_H
 #define NTB_SS_CORE_H
-#include "common.h"
+#include "ntb_common.h"
 
 #define MSG_END "\r\r"
 constexpr const size_t MSG_END_LEN= std::char_traits<char>::length(MSG_END);
